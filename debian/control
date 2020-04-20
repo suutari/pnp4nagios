@@ -42,9 +42,7 @@ Description: Nagios addon to create graphs from performance data (binaries)
 
 Package: pnp4nagios-web
 Architecture: all
-Depends: libapache2-mod-php5 | php5, php5-gd,
- libkohana2-php,
- libfpdi-php,
+Depends: libapache2-mod-php | php, php-gd,
  libjs-jquery (>= 1.6.2), libjs-jquery-ui (>= 1.8.ooops.14),
  rrdtool,
  adduser,
