@@ -1,3 +1,7 @@
+pnp4nagios (0.6.26+228-g685ff48-1) unstable; urgency=low
+
+  * Package the latest version from GitHub lingej/pnp4nagios.
+
 pnp4nagios (0.6.16-2) unstable; urgency=low
 
   * debian/control:
