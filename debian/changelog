@@ -1,6 +1,15 @@
+pnp4nagios (0.6.26+228-g685ff48-2) unstable; urgency=low
+
+  * Include Kohana
+    - Kohana package is no longer available in Debian, so bundle it.
+
+ -- Tuomas Suutari <tuomas@nepnep.net>  Sat, 25 Apr 2020 04:46:35 +0300
+
 pnp4nagios (0.6.26+228-g685ff48-1) unstable; urgency=low
 
   * Package the latest version from GitHub lingej/pnp4nagios.
+
+ -- Tuomas Suutari <tuomas@nepnep.net>  Sat, 25 Apr 2020 03:29:00 +0300
 
 pnp4nagios (0.6.16-2) unstable; urgency=low
 
