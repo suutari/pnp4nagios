@@ -120,11 +120,11 @@ install: build
 	rm -fv debian/tmp/usr/share/doc/pnp4nagios/examples/ssi/*.in
 
 	# Remove external PHP classes/libraries: FPDF, FPDF-TPL, FPDI
-	rm -r debian/tmp/usr/share/pnp4nagios/html/application/vendor/fpdf
+	# rm -r debian/tmp/usr/share/pnp4nagios/html/application/vendor/fpdf
 
 	# Remove external JavaScript files: jQuery and jQuery-UI
-	rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-min.js
-	rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-ui.min.js
+	# rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-min.js
+	# rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-ui.min.js
 
 	# Clean up some files
 	rmdir debian/tmp/usr/bin

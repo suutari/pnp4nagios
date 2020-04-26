@@ -1,3 +1,11 @@
+pnp4nagios (0.6.26+228-g685ff48-3) unstable; urgency=low
+
+  * Include jQuery and FPDF
+    - There seems to be some problems in using the jQuery from Debian
+      and FPDF is no longer available as a deb package
+
+ -- Tuomas Suutari <tuomas@nepnep.net>  Sun, 26 Apr 2020 04:06:10 +0300
+
 pnp4nagios (0.6.26+228-g685ff48-2) unstable; urgency=low
 
   * Include Kohana
