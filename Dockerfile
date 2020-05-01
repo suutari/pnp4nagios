@@ -16,6 +16,4 @@ COPY . .
 
 RUN dpkg-checkbuilddeps
 
-RUN mkdir ../dest
-
-CMD dpkg-buildpackage -us -uc && mv ../*.deb ../dest/
+CMD sleep 3600

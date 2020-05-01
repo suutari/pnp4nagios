@@ -7,14 +7,21 @@ echo "Building Docker image"
 docker build . --tag $tag
 
 echo "Building the deb packages in Docker container"
-docker run --name $container $tag
+docker run --name $container --detach $tag
+docker exec -it $container dpkg-buildpackage -us -uc
+docker exec -it $container sh -c '
+        set -e
+        mkdir /dest
+        mv -v ../*.deb /dest/
+        cd /dest
+        dpkg-scanpackages . | gzip -9c > Packages.gz'
 
 echo "Copying built packages to \"debs\" directory"
 mkdir -p debs
-docker cp $container:/workdir/dest/. - | tar -C debs/ -xv
+docker cp $container:/dest/. - | tar -C debs/ -xv
 
 echo "Removing the Docker container"
-docker rm $container
+docker rm -f $container
 
 echo "Removing the generated Docker images"
 docker image rm pnp4nagios-deb-builder
